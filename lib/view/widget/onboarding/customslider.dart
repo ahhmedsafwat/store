@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sotre/controller/onboardingcontroller.dart';
 
 import '../../../core/constant/color.dart';
 import '../../../data/datasource/static/static.dart';
 
-class CustomSliderOnboard extends StatelessWidget {
+class CustomSliderOnboard extends GetView<OnBoardingControllerImp> {
   const CustomSliderOnboard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      controller: controller.pageController,
+      onPageChanged: (value) {
+        controller.onPageChange(value);
+      },
       physics: const BouncingScrollPhysics(),
       itemCount: onBoardingList.length,
       itemBuilder: (context, index) {

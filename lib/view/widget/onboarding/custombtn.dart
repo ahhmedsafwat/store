@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sotre/controller/onboardingcontroller.dart';
+import 'package:sotre/data/model/onboardingmodel.dart';
 
 import '../../../core/constant/color.dart';
 
-class CustomBtnOnboarding extends StatelessWidget {
+class CustomBtnOnboarding extends GetView<OnBoardingControllerImp> {
   const CustomBtnOnboarding({super.key});
 
   @override
@@ -10,7 +13,9 @@ class CustomBtnOnboarding extends StatelessWidget {
     return Container(
       height: 40,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          controller.next();
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: Appcolor.primaryColor,
           padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 2),
