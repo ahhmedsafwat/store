@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ImageAsset {
+class AppImageAsset {
   static String rootImage = 'assets/images';
 
   static String onBoardingImageOne = "$rootImage/onboardingone.PNG";

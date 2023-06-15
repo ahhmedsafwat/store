@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sotre/data/datasource/static/static.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});
@@ -6,9 +7,36 @@ class OnBoarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:PageView.builder(itemBuilder: (context, index) {
-        return 
-      },),
+      body: SafeArea(
+        child: PageView.builder(
+          physics: BouncingScrollPhysics(),
+          itemCount: onBoardingList.length,
+          itemBuilder: (context, index) {
+            return Column(
+              children: [
+                Text(
+                  onBoardingList[index].title!,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+                const SizedBox(height: 80),
+                Image(image: AssetImage(onBoardingList[index].img!)),
+                const SizedBox(height: 80),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 45),
+                  alignment: Alignment.center,
+                  width: double.infinity,
+                  child: Text(
+                    onBoardingList[index].body!,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(height: 2),
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 }
