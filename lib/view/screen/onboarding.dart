@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sotre/core/constant/color.dart';
 import 'package:sotre/data/datasource/static/static.dart';
 
 class OnBoarding extends StatelessWidget {
@@ -20,7 +21,12 @@ class OnBoarding extends StatelessWidget {
                       fontWeight: FontWeight.bold, fontSize: 20),
                 ),
                 const SizedBox(height: 80),
-                Image(image: AssetImage(onBoardingList[index].img!)),
+                Image(
+                  width: 200,
+                  height: 250,
+                  fit: BoxFit.contain,
+                  image: AssetImage(onBoardingList[index].img!),
+                ),
                 const SizedBox(height: 80),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 45),
@@ -29,7 +35,10 @@ class OnBoarding extends StatelessWidget {
                   child: Text(
                     onBoardingList[index].body!,
                     textAlign: TextAlign.center,
-                    style: TextStyle(height: 2),
+                    style: const TextStyle(
+                        height: 2,
+                        color: Appcolor.grey,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
