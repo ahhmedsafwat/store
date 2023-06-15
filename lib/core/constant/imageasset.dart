@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class AppImageAsset {
   static String rootImage = 'assets/images';
 
