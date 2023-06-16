@@ -98,6 +98,11 @@ flutter:
         - asset: assets/fonts/Cairo/Cairo-Bold.ttf
           weight: 700
 
+    - family: Playfair Display
+      fonts:
+        - asset: assets/fonts/playfair/PlayfairDisplay-Regular.ttf
+        - asset: assets/fonts/playfair/PlayfairDisplay-Bold.ttf
+          weight: 700
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

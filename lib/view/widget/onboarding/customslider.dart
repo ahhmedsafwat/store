@@ -31,7 +31,7 @@ class CustomSliderOnboard extends GetView<OnBoardingControllerImp> {
               fit: BoxFit.contain,
               image: AssetImage(onBoardingList[index].img!),
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 60),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 45),
               alignment: Alignment.center,
@@ -42,7 +42,8 @@ class CustomSliderOnboard extends GetView<OnBoardingControllerImp> {
                 style: const TextStyle(
                     height: 2,
                     color: Appcolor.grey,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
               ),
             ),
           ],

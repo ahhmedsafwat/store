@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sotre/controller/onboardingcontroller.dart';
-import 'package:sotre/data/model/onboardingmodel.dart';
-
 import '../../../core/constant/color.dart';
 
 class CustomBtnOnboarding extends GetView<OnBoardingControllerImp> {
@@ -20,7 +18,9 @@ class CustomBtnOnboarding extends GetView<OnBoardingControllerImp> {
           backgroundColor: Appcolor.primaryColor,
           padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 2),
         ),
-        child: const Text('Continue'),
+        child: const Text(
+          'Continue',
+        ),
       ),
     );
   }
