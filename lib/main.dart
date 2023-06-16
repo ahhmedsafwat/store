@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sotre/routes.dart';
 
 import 'view/screen/onboarding.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: OnBoarding(),
+      routes: routes,
     );
   }
 }

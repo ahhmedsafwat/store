@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sotre/core/constant/constroutes.dart';
 import 'package:sotre/data/datasource/static/static.dart';
 
 abstract class OnBoardingController extends GetxController {
@@ -14,7 +15,7 @@ class OnBoardingControllerImp extends OnBoardingController {
   next() {
     currntPage++;
     if (currntPage > onBoardingList.length - 1) {
-      print('page limit');
+      Get.offAllNamed(AppRoute.login);
     } else {
       pageController.animateToPage(currntPage,
           duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
